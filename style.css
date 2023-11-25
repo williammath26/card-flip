@@ -4,42 +4,61 @@
     box-sizing: border-box;
 }
 body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: sans-serif;
-    background-color: black;
+    background-color: #f4f4f4;
+}
+.text-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+.text-data .name{
+    font-size: 22px;
+    font-weight: 500;
+}
+.text-data .age{
+    font-size: 15px;
+    font-weight: bold;
+}
+.text-data .about{
+    font-size: 10px;
+    font-weight: bold;
+    
 }
 section{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    width: 500px;
+    width: 800px;
     margin: 50px auto;
 }
-.face h2{
-    display: flex;
-    align-items: center;
-    margin:auto;
-    width: 50px;
-    height: 50px;
-    background-color: aqua;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-.face label{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: red;
-    padding: 10px;
-    width: 60px;
-    height: auto;
-    border-radius: 10px;
-    font-size: 10px;
-}
 .face{
-    width: 600px;
+    width: 800px;
     height: 300px;
     perspective: 700px;
+}
+
+.image{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(79, 79, 240);
+    padding: 2px;
+    margin-bottom: 10px;
+}
+.image .profile-img{
+    height: 100%;
+    width: 100%;
+    object-fit:fill;
+    border-radius: 50%;
+    border: 3px solid #fff;
 }
 .front,.back{
     position: absolute;
@@ -50,11 +69,17 @@ section{
     transition: 700ms;
 }
 .front{
-    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(144, 166, 238);
     z-index: 1;
 }
 .back{
-    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:yellow;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
 
